@@ -17,7 +17,7 @@ class DeployController extends AbstractController
     /**
      * @throws TransportExceptionInterface
      */
-    #[Route('/{owner}/{repo}/pull_artifact', ':pull_artifact')]
+    #[Route('/{owner}/{repo}/pull_artifact', ':pull_artifact', methods: ['PUT'])]
     public function pullArtifact(
         string $owner,
         string $repo,
