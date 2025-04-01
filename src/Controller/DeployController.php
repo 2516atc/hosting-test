@@ -14,6 +14,12 @@ use Symfony\Contracts\HttpClient\HttpClientInterface;
 #[Route('/deploy', 'deploy')]
 class DeployController extends AbstractController
 {
+    #[Route('/')]
+    public function home(): Response
+    {
+        return new Response('Hello, World!');
+    }
+
     /**
      * @throws TransportExceptionInterface
      */
