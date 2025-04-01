@@ -1,4 +1,4 @@
-name: Build and publish site to staging environment
+name: Test Deploy
 on:
   push
 jobs:
