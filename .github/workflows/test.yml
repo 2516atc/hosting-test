@@ -1,0 +1,26 @@
+name: Build and publish site to staging environment
+on:
+  push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      APP_ENV: dev
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Archive production artifacts
+        id: artifact-upload-step
+        uses: actions/upload-artifact@v4
+        with:
+          path: /
+          retention-days: 1
+
+      - name: Deploy Stage
+        uses: fjogeleit/http-request-action@v1
+        with:
+          url: 'https://test.2516droitwichsquadron.co.uk/deploy/2516atc/hosting-test/pull_artifact'
+          method: 'PUT'
+          customHeaders: '{"Authorization": "Bearer ${{ secrets.GITHUB_TOKEN }}"}'
+          data: '{"artifactId": ${{ steps.artifact-upload-step.outputs.artifact-id }}, "destinationPath": "/test"}'
