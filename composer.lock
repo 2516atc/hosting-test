@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4fd22df1a389a6acb08cbe0fcf8875ba",
+    "content-hash": "dc769feecbb8a2204ac0696b973c981e",
     "packages": [
         {
             "name": "doctrine/deprecations",
@@ -474,43 +474,6 @@
                 "source": "https://github.com/php-fig/log/tree/3.0.2"
             },
             "time": "2024-09-11T13:17:53+00:00"
-        },
-        {
-            "name": "rivsen/hello-world",
-            "version": "0.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Rivsen/hello-world.git",
-                "reference": "6543d715e24c771a77f073ee08185e6dd657fd0a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Rivsen/hello-world/zipball/6543d715e24c771a77f073ee08185e6dd657fd0a",
-                "reference": "6543d715e24c771a77f073ee08185e6dd657fd0a",
-                "shasum": ""
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Rivsen\\Demo\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Rivsen Tan",
-                    "email": "rivsen1003@gmail.com"
-                }
-            ],
-            "description": "this is a hello world repo for composer.",
-            "support": {
-                "issues": "https://github.com/Rivsen/hello-world/issues",
-                "source": "https://github.com/Rivsen/hello-world/tree/0.1"
-            },
-            "time": "2015-03-14T10:26:02+00:00"
         },
         {
             "name": "symfony/cache",
