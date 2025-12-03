@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <style>
+        form div:last-of-type {
+            display: inline;
+        }
+    </style>
+{% endblock %}
+
+{% block main %}
+    {{ form_start(form) }}
+        {{ form_rest(form) }}
+        <a class="button hollow alert" href="{{ path('configuration_all') }}">Cancel</a>
+    {{ form_end(form) }}
+{% endblock %}

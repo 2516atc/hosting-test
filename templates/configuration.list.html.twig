@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+{% set title = 'Configuration' %}
+
+{% block main %}
+    <div class="actions">
+        <a class="button" href="{{ path('configuration_new') }}">Add New</a>
+    </div>
+
+    <table>
+        <tr>
+            <th>Owner</th>
+            <th>Repo</th>
+            <th>Path</th>
+            <th></th>
+        </tr>
+        {% for configuration in configurations %}
+            <tr>
+                <td>{{ configuration.repositoryOwner }}</td>
+                <td>{{ configuration.repositoryName }}</td>
+                <td>{{ configuration.deployPath }}</td>
+                <td class="actions">
+                    <a class="button" href="{{ path('configuration_edit', { id: configuration.id }) }}">Edit</a>
+                    <a class="button hollow alert" href="{{ path('configuration_delete', { id: configuration.id }) }}">Delete</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

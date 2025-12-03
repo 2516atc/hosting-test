@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="grid-x grid-padding-x">
+        <div class="cell login">
+            <span aria-hidden="true" class="crest"></span>
+            <h1>Log in to hosting</h1>
+            <form action="{{ path('auth_github') }}" method="post">
+                <button class="github" type="submit">
+                    <img src="/images/github_invertocat_light.svg" alt="GitHub Logo">
+                    <span>Log in with GitHub</span>
+                </button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

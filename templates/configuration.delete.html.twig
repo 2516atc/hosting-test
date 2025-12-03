@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+{% set title = 'Delete Configuration' %}
+
+{% block main %}
+    <p>
+        <strong>Repository: </strong>
+        {{ configuration.repositoryOwner }}/{{ configuration.repositoryName }}
+    </p>
+
+    <p>
+        <strong>Deploy Path: </strong>
+        {{ configuration.deployPath }}
+    </p>
+
+    <form method="post">
+        <input class="button alert" type="submit" value="Delete" />
+        <a class="button hollow" href="{{ path('configuration_all') }}">Cancel</a>
+    </form>
+{% endblock %}
