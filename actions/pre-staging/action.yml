@@ -1,0 +1,5 @@
+name: 'Pre-Staging'
+description: 'Prepare directories for staging deployment'
+runs:
+    using: 'node24'
+    main: 'main.js'

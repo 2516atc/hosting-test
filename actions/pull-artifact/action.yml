@@ -1,0 +1,9 @@
+name: 'Pull Artifact'
+description: 'Pull and extract artifact to hosting directory'
+inputs:
+    artifact_id:
+        description: 'ID of published artifact'
+        required: true
+runs:
+    using: 'node24'
+    main: 'main.js'
