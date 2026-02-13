@@ -1,0 +1,13 @@
+{
+    "private": true,
+    "scripts": {
+        "build": "node build-actions.cjs"
+    },
+    "type": "module",
+    "devDependencies": {
+        "@actions/core": "^3.0.0",
+        "@types/node": "^24.0.14",
+        "@vercel/ncc": "^0.38.4",
+        "typescript": "^5.8.3"
+    }
+}
